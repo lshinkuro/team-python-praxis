@@ -27,7 +27,27 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        user = User(username=form.username.data,
+        tempatlahir=form.tempatlahir.data,
+        tanggal_lahir=form.tanggal_lahir.data,
+        nomor_hp=form.nomor_hp.data,
+        alamat_tinggal=form.alamat_tinggal.data,
+        kota_asal=form.kota_asal.data, 
+        pendidikan=form.pendidikan.data,
+        nama_kampus=form.nama_kampus.data, 
+        Program_studi=form.Program_studi.data,
+        alamat_kampus=form.alamat_kampus.data, 
+        pengalaman_kerja=form.pengalaman_kerja.data,
+        pengalaman_project=form.pengalaman_project.data, 
+        tujuan=form.tujuan.data,
+        validation1=form.validation1.data, 
+        validation2=form.validation2.data,
+        profil_medsos=form.profil_medsos.data, 
+        validation3=form.validation3.data,
+        validation4=form.validation4.data, 
+        email=form.email.data, 
+        password=hashed_password,
+        )
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')

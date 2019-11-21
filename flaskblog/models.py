@@ -11,6 +11,26 @@ def load_user(user_id):
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
+    tempatlahir = db.Column(db.String(20), unique=True, nullable=False)
+    nomor_hp = db.Column(db.String(20), unique=True, nullable=False)
+    alamat_tinggal = db.Column(db.String(120), unique=True, nullable=False)
+
+    kota_asal = db.Column(db.String(20), unique=True, nullable=False)
+    pendidikan = db.Column(db.String(120), unique=True, nullable=False)
+    nama_kampus = db.Column(db.String(120), unique=True, nullable=False)
+    program_studi = db.Column(db.String(120), unique=True, nullable=False)
+
+    alamat_kampus = db.Column(db.String(120), unique=True, nullable=False)
+    pengalaman_kerja = db.Column(db.String(120), unique=True, nullable=False)
+    pengalaman_project = db.Column(db.String(120), unique=True, nullable=False)
+    tujuan = db.Column(db.String(120), unique=True, nullable=False)
+
+    validation1 = db.Column(db.String(120), unique=True, nullable=False)
+    validation2 = db.Column(db.String(120), unique=True, nullable=False)
+    profil_medsos = db.Column(db.String(20), unique=True, nullable=False)
+    validation3 = db.Column(db.String(20), unique=True, nullable=False)
+    validation = db.Column(db.String(20), unique=True, nullable=False)
+
     email = db.Column(db.String(120), unique=True, nullable=False)
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
     password = db.Column(db.String(60), nullable=False)

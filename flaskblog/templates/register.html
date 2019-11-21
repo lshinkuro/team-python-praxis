@@ -34,6 +34,233 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
+                    {{ form.tanggal_lahir.label(class="form-control-label") }}
+
+                    {% if form.tanggal_lahir.errors %}
+                        {{ form.tanggal_lahir(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.tanggal_lahir.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.tanggal_lahir(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.nomor_hp.label(class="form-control-label") }}
+
+                    {% if form.nomor_hp.errors %}
+                        {{ form.nomor_hp(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.nomor_hp.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.nomor_hp(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.alamat_tinggal.label(class="form-control-label") }}
+
+                    {% if form.alamat_tinggal.errors %}
+                        {{ form.alamat_tinggal(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.alamat_tinggal.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.alamat_tinggal(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.kota_asal.label(class="form-control-label") }}
+
+                    {% if form.kota_asal.errors %}
+                        {{ form.kota_asal(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.kota_asal.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.kota_asal(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                        {{ form.pendidikan.label }}
+                        <br><select name="subject">
+                            <option disabled="disabled" selected="selected">
+                            <option>Diploma/Sarjana Terapan atau diploma lain</option>
+                            <option>Strata 1</option>
+                            <option>Strata 2 atau lebih tinggi</option>
+                            <option>Other</option>
+                            </option>
+                            </select> 
+                        </br>   
+                        
+                       
+                </div> 
+
+                <div class="form-group">
+                        {{ form.nama_kampus.label(class="form-control-label") }}
+    
+                        {% if form.nama_kampus.errors %}
+                            {{ form.nama_kampus(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.nama_kampus.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.nama_kampus(class="form-control form-control-lg") }}
+                        {% endif %}
+                 </div>
+                 <div class="form-group">
+                        {{ form.Program_studi.label(class="form-control-label") }}
+    
+                        {% if form.Program_studi.errors %}
+                            {{ form.Program_studi(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.Program_studi.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.Program_studi(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+                <div class="form-group">
+                        {{ form.alamat_kampus.label(class="form-control-label") }}
+    
+                        {% if form.alamat_kampus.errors %}
+                            {{ form.alamat_kampus(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.alamat_kampus.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.alamat_kampus(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+
+                
+
+                <div class="form-group">
+                        {{ form.pengalaman_kerja.label(class="form-control-label") }}
+    
+                        {% if form.pengalaman_kerja.errors %}
+                            {{ form.pengalaman_kerja(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.pengalaman_kerja.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.pengalaman_kerja(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+                <div class="form-group">
+                        {{ form.pengalaman_project.label(class="form-control-label") }}
+    
+                        {% if form.pengalaman_project.errors %}
+                            {{ form.pengalaman_project(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.pengalaman_project.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.pengalaman_project(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+
+                <div class="form-group">
+                        {{ form.tujuan.label(class="form-control-label") }}
+    
+                        {% if form.tujuan.errors %}
+                            {{ form.tujuan(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.tujuan.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.tujuan(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+
+
+                <div class="form-group">
+                        {{ form.validation1.label(class="form-control-label") }}
+                        <br><select name="subject">
+                                <option disabled="disabled" selected="selected">
+                                <option>Ya</option>
+                                <option>Tidak</option>
+                                <option>Mungkin</option>
+                                <option>Other</option>
+                                </option>
+                                </select> 
+                            </br> 
+                </div>
+
+                <div class="form-group">
+                        {{ form.validation2.label(class="form-control-label") }}
+                        <br><select name="subject">
+                                <option disabled="disabled" selected="selected">
+                                <option>Ya</option>
+                                <option>Tidak</option>
+                                <option>Mungkin</option>
+                                <option>Other</option>
+                                </option>
+                                </select> 
+                            </br> 
+                </div>
+
+                <div class="form-group">
+                        {{ form.profil_medsos.label(class="form-control-label") }}
+    
+                        {% if form.profil_medsos.errors %}
+                            {{ form.profil_medsos(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.profil_medsos.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.profil_medsos(class="form-control form-control-lg") }}
+                        {% endif %}
+                </div>
+
+                <div class="form-group">
+                        {{ form.validation3.label(class="form-control-label") }}
+                        <br><select name="subject">
+                                <option disabled="disabled" selected="selected">
+                                <option>Facebook</option>
+                                <option>Twitter</option>
+                                <option>Instagram</option>
+                                <option>Whatssapp</option>
+                                <option>Linkedln</option>
+                                <option>Teman</option>
+                                <option>Other</option>
+                                </option>
+                                </select> 
+                            </br> 
+                </div>
+                
+                <div class="form-group">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}
                         {{ form.email(class="form-control form-control-lg is-invalid") }}
@@ -46,6 +273,12 @@
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+                <div>
+                    {{form.validation4.label}}
+                    {{form.validation4}}
+                </div>
+
                 <div class="form-group">
                     {{ form.password.label(class="form-control-label") }}
                     {% if form.password.errors %}
